@@ -196,3 +196,91 @@ img {
     display: none;
   }
 }
+
+.paid {
+  background-color: #2B2E44;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.paid-box {
+  color: #fff;
+  padding: 64px 32px 96px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.paid-box .paid-first .paid-first__title {
+  font-size: 38px;
+  line-height: 46.08px;
+  max-width: 460px;
+  padding-top: 83px;
+  padding-left: 32px;
+}
+.paid-box .paid-first .paid-first__items {
+  padding-top: 148px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 39px;
+}
+.paid-box .paid-first .paid-first__items .paid-first__item {
+  max-width: 400px;
+}
+.paid-box .paid-first .paid-first__items .paid-first__item .paid-first__item-number {
+  width: 64px;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  color: #FF9800;
+  padding: 18px;
+  background-color: #F5F0E8;
+  border-radius: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+}
+.paid-box .paid-first .paid-first__items .paid-first__item .paid-first__item-inf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  padding-left: 88px;
+}
+.paid-box .paid-first .paid-first__items .paid-first__item .paid-first__item-inf .paid-first__item-inf-title {
+  line-height: 26.88px;
+  font-size: 22px;
+}
+.paid-box .paid-first .paid-first__items .paid-first__item .paid-first__item-inf .paid-first__item-inf-text {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7019607843);
+  line-height: 22.88px;
+}
+
+.paid-green {
+  background-color: #214128;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.paid-orange {
+  background-color: #AC511E;
+  border-radius: 20px 20px 0px 0px;
+}
