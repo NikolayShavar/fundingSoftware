@@ -1,3 +1,27 @@
 .paid-green
     background-color: #214128
     border-radius: 20px 20px 0px 0px
+    .container
+        +media(md)
+            padding: 0 10px
+
+.paid-first__green
+    +media ($lg)
+        position: relative
+        background-image: url('../images/roof2.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        margin: 0 auto
+        border-radius: 20px
+.paid-first__green::after
+    +media ($lg)
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: #214128
+        opacity: .5
+        z-index: 1
