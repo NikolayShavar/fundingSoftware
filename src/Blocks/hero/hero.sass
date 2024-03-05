@@ -8,6 +8,8 @@
         z-index: -2 
         width: 100%
         height: 100vh
+        img
+            width: 100%
         .second-bg
             display: flex
             position: absolute
@@ -22,89 +24,85 @@
         padding-right: 26px
         font-size: 18px
         line-height: 21.12px
-        @include media ($sm)
+        +media ($sm)
             padding-right: 0
         .demo__btn
             cursor: pointer
         .login__btn
             cursor: pointer
             color: #303F9F
-    .hero-main
-        
-        .hero-main__box
-            .hero-main__box-title
-                padding-top: 163px
-                font-size: 56px
-                line-height: 67.2px
-                @include media ($md-sm)
-                    padding-top: 80px
-                    font-size: 40px
-                @include media ($sm)
-                    padding-top: 20px
-                    font-size: 35px
-                    text-align: center
-            .hero-main__box-text
-                font-size: 19px
-                line-height: 24.96px
-                padding-top: 26px
-            .hero-main__box-btn
-                font-size: 18px
-                line-height: 21.12px
-                display: flex
-                gap: 12px
-                padding-top: 39px
-                cursor: pointer
-                .hero-main__box-btn__demo
-                    border-radius: 15px
-                    padding: 15px 25px 17px 25px
-                    background-color: #303F9F
-                    text-align: center
-                .hero-main__box-btn__login
-                    background-color: #fff
-                    border-radius: 15px
-                    padding: 15px 25px 17px 25px
-                    @include media ($sm)
-                        margin: auto
-                    a
-                        color:#303F9F
-            .hero-main__box-sponsors__title
-                font-size: 18px
-                line-height: 22.88px
-                padding-top: 136px
-                @include media ($lg-md)
-                    max-width: 300px
-                    text-align: left
-                @include media ($md-sm)
-                    padding-top: 50px
-            .hero-main__box-sponsors__logo
-                display: grid
-                grid-template-columns: repeat(4, 1fr)
-                max-width: 544px
-                gap: 15px
-                padding-top: 22px
+    
+.hero-main__box
+    &-title
+        padding-top: 163px
+        font-size: 56px
+        line-height: 67.2px
+        +media ($sm)
+            padding-top: 80px
+            font-size: 40px
+        +media ($sm)
+            padding-top: 20px
+            font-size: 35px
+            text-align: center
+    &-text
+        font-size: 19px
+        line-height: 24.96px
+        padding-top: 26px
+    &-btn
+        font-size: 18px
+        line-height: 21.12px
+        display: flex
+        gap: 12px
+        padding-top: 39px
+        cursor: pointer
+        &__demo
+            border-radius: 15px
+            padding: 15px 25px 17px 25px
+            background-color: #303F9F
+            text-align: center
+        &__login
+            background-color: #fff
+            border-radius: 15px
+            padding: 15px 25px 17px 25px
+            +media ($sm)
+                margin: auto
+            a
+                color:#303F9F
+    &-sponsors__title
+        font-size: 18px
+        line-height: 22.88px
+        padding-top: 136px
+        +media ($lg)
+            max-width: 300px
+    &-sponsors__logo
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        max-width: 544px
+        gap: 15px
+        padding-top: 22px
 
-                @include media ($lg)
-                    grid-template-columns: repeat(2, 1fr)
-                    max-width: 200px
-                @include media ($md)
-                    grid-template-columns: repeat(4, 1fr)
-                    max-width: 544px
-                .hero-main__box-sponsors__logo-column
-                    display: flex
-                    flex-direction: column
-                    gap: 15px
-                    .logo-spons
-                        margin: 0 auto
-                        max-width: 80px
-                        max-height: 42px
-    .hero-img
-        max-width: 627px
-        position: absolute
-        right: 0
-        bottom: 0
-        padding-right: 30px
-        padding-bottom: 48px
-        @include media ($lg-md)
-            max-width: 500px
-        @include media ($md)
-            display: none
+        +media ($lg)
+            grid-template-columns: repeat(2, 1fr)
+            max-width: 200px
+        +media ($md)
+            grid-template-columns: repeat(4, 1fr)
+            max-width: 544px
+    &-sponsors__logo-column
+        display: flex
+        flex-direction: column
+        gap: 15px
+        .logo-spons
+            margin: 0 auto
+            max-width: 80px
+            max-height: 42px
+.hero-img
+    max-width: 627px
+    position: absolute
+    right: 0
+    bottom: 0
+    padding-right: 30px
+    padding-bottom: 48px
+    +media ($lg)
+        max-width: 500px
+    +media ($md)
+        display: none

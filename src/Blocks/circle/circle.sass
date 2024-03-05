@@ -1,103 +1,127 @@
 .circle
     background-color: #F5F0E8
-    position: relative
+
+    .circle-main
+        position: relative
+        +media($lg)
+            display: flex
+            justify-content: center
+            padding: 15px 0
+        +media($md)
+            flex-direction: column
+
+.circle-img
+    +media ($lg)
+        display: none
+
+.circle-title
     text-align: center
-    .container
+    padding-top: 83px
+    +media($md)
+        padding-top: 20px
+    &__first
+        font-size: 45px
+        padding-bottom: 26px
+        +media($md)
+        font-size: 30px
+        padding-bottom: 10px
+    &__second
+        font-size: 18px
+
+.circle-main-first
+    position: absolute
+    border: 10px solid #303F9F
+    color: #303F9F
+    border-radius: 15px
+    padding: 32px 15px
+    background-color: #fff
+    top: 228px
+    left: calc(50% - 180px)
+    +media($lg)
+        position: static
+    +media($md)
+        max-width: 300px
+        margin: 0 auto
+
+    &-up
+        display: flex
+    &__title
+        display: flex
+        flex-direction: column
+        justify-content: center
+        gap: 5px
+        padding-left: 16px
+        &__name
+            font-size: 21px
+        &__text
+            font-size: 14px
+    &__down
+        min-width: 304px
+        min-height: 295px
+        +media($md)
+        min-width: 150px
+
+.circle-main-seconds
+    +media ($lg)
+        display: flex
+        flex-direction: column
+        gap: 5px  
+        padding-left: 15px  
+    +media($md)
+        margin: 0 auto
+        padding-left: 0
+
+.circle-main-second
+    display: flex
+    position: absolute
+    max-width: 346px
+    max-height: 86px
+    border-radius: 15px
+    background-color: #fff
+    +media ($lg)
+        width: 300px
+    +media($md)
+        width: auto
+
+    &__num
+        color: #FF9800
+        padding: 18px
         background-color: #F5F0E8
-        .circle-first
-            .circle-first__title
-                font-size: 45px
-                padding-top: 83px
+        border-radius: 10px
+        margin: 15px
+    &__text
+        text-align: left
+        align-items: center
+        display: flex
+        margin: 21px 102px 15px 6px
+        +media($lg)
+            margin: 21px 20px 15px 6px
+            text-align: center
 
-        .circle-second
-            background-color: #F5F0E8
-            font-size: 19px
-            position: relative
-
-            .circle-second__text
-                font-size: 18px
-                padding-top: 26px
-                
-                .circle-img
-                    background-color: #F5F0E8
-                    z-index: -1
-                    max-width: 1140px
-                    max-height: 998px
-                    margin: 0 auto
-                    .circle-items
-                        display: flex
-
-                        .circle-block
-                            display: flex
-                            position: absolute
-                            max-width: 346px
-                            max-height: 86px
-                            border-radius: 15px
-                            background-color: #fff
-                            padding: 15px
-                            .circle-item__number
-                                color: #FF9800
-                                padding: 18px
-                                background-color: #F5F0E8
-                                border-radius: 10px
-                            .circle-item__text
-                                text-align: left
-                                padding-left: 21px
-                                align-items: center
-                                display: flex
-
-                        .circle-item01
-                            max-width: 326px
-                            top: 125px
-                            left: 0
-                            right: 0
-                            margin: 0 auto
-
-                        .circle-item02
-                            right: 18px
-                            top: 0
-                            bottom: 0
-                            margin: auto 0
-
-                        .circle-item03
-                            right: 169px
-                            bottom: 150px
-
-                        .circle-item04
-                            left: 169px
-                            bottom: 150px
-
-                        .circle-item05
-                            left: 18px
-                            top: 0
-                            bottom: 0
-                            margin: auto 0
-                        .circle-item__main
-                            border: 10px solid #303F9F
-                            border-radius: 15px
-                            padding: 32px 15px
-                            background-color: #fff
-                            position: absolute
-                            display: flex
-                            top: calc(50% - 155px)
-                            left: calc(50% - 160px)
-
-                            .circle-item__main-first
-                                display: flex
-                                max-height: 64px
-
-                                .circle-item__main-first__img
-                                    max-width: 64px
-                                    max-height: 64px             
-                                .circle-item__main-first__title
-                                    padding-left: 16px
-                                    display: flex
-                                    flex-direction: column
-                                    justify-content: center
-                                    text-align: left
-                                    .circle-item__main-first__title-name
-                                        font-size: 21px
-                                    .circle-item__main-first__title-info
-                                        font-size: 14px
-                            .circle-item__main-second
-                                height: 295px
+.circle-main-second1
+    top: 100px
+    left: calc(50% - 180px)
+    +media($lg)
+        position: static
+.circle-main-second2
+    top: 300px
+    right: 30px
+    max-width: 326px
+    +media($lg)
+        position: static
+.circle-main-second3
+    bottom: 150px
+    right: 150px
+    +media($lg)
+        position: static
+.circle-main-second4
+    bottom: 150px
+    left: 150px
+    +media($lg)
+        position: static
+.circle-main-second5
+    top: 300px
+    left: 30px
+    max-width: 326px
+    +media($lg)
+        position: static
