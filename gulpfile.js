@@ -25,15 +25,6 @@ function pughtml() {
   .pipe(browserSync.stream())
 }
 
-// function pages() {
-//   return src('src/pages/*.html')
-//   .pipe(include({
-//     includePaths:'src/components'
-//   }))
-//   .pipe(dest('src'))
-//   .pipe(dest('app'))
-//   .pipe(browserSync.stream())
-// }
 
 function fonts () {
   return src('src/fonts/*.*')
@@ -59,7 +50,6 @@ return src('src/images/*.svg')
   }
 }))
 .pipe(dest('app/images'))
-.pipe(dest('src/images'))
 }
 
 
