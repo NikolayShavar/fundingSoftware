@@ -1,0 +1,98 @@
+.finances-box
+    display: flex
+    position: relative
+    border-radius: 15px
+    background-image: url(../images/finance-bg.png)
+    background-repeat: no-repeat
+    margin: 32px 0 48px
+
+.finances-box-first
+    color: #fff
+    padding-left: 48px
+    +media($lg)
+        padding-left: 18px
+    
+    &__title
+        font-size: 45px
+        padding: 67px 0 102px 0
+        +media($lg)
+            font-size: 35px
+            padding-bottom: 50px
+        +media($sm)
+            padding: 20px 0 20px
+
+
+.finances-box-first__results
+    display: flex
+    flex-direction: column
+    gap: 5px
+
+    
+    &__title
+        font-size: 18px
+        padding-bottom: 9px
+
+    &__inner
+        display: inline-block
+        width: fit-content
+        padding: 12px 24px 14px 0
+        background-color: #1E4927
+        border-radius: 15px
+        white-space: nowrap
+        +media($lg)
+        padding-right: 10px
+
+        span
+            color: #96FDAD
+            font-size: 22px
+            margin: 10px 10px 16px 16px
+.slash
+    span
+        font-size: 18px
+        color: #96FDAD
+.finances-box-second
+    color: #333333
+    background-color: #FFFFFF
+    padding: 40px 38px 30px 36px 
+    margin: 80px 32px 64px 57px
+    border-radius: 15px
+    max-width: 598px
+    +media($lg)
+        max-width: 465px
+        margin: 40px 18px 20px 0
+    +media($md)
+        position: absolute
+        bottom: -385px
+        margin: 0
+        background-color: #F5F0E8
+    +media($sm)
+        bottom: -300px
+        padding: 10px
+    +media($xs)
+        bottom: -420px
+    &__text
+        font-size: 24px
+        padding-bottom: 42px
+        +media($md)
+            font-size: 18px
+        +media($sm)
+            padding-bottom: 10px
+
+
+.finances-box-second__akk
+    position: relative
+    &__img
+        display: flex
+        background-color: #303F9F
+        max-width: 80px
+        height: 80px
+        img
+            width: 56px
+            height: 56px
+            display: flex
+            margin: auto
+    &__name
+        position: absolute
+        left: 92px
+        bottom: 10px
+        font-size: 19px
