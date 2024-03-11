@@ -5,28 +5,32 @@
     background-image: url(../images/finance-bg.png)
     background-repeat: no-repeat
     margin: 32px 0 48px
+    +media($lg)
+        display: block
+
 
 .finances-box-first
     color: #fff
     padding-left: 48px
-    +media($lg)
-        padding-left: 18px
+    +media($xl)
+        padding-left: 15px
     
     &__title
         font-size: 45px
         padding: 67px 0 102px 0
         +media($lg)
-            font-size: 35px
-            padding-bottom: 50px
+            padding: 20px 0 20px 0
         +media($sm)
-            padding: 20px 0 20px
+        font-size: 35px
+
+
+
 
 
 .finances-box-first__results
     display: flex
     flex-direction: column
     gap: 5px
-
     
     &__title
         font-size: 18px
@@ -50,6 +54,7 @@
     span
         font-size: 18px
         color: #96FDAD
+
 .finances-box-second
     color: #333333
     background-color: #FFFFFF
@@ -58,26 +63,16 @@
     border-radius: 15px
     max-width: 598px
     +media($lg)
-        max-width: 465px
-        margin: 40px 18px 20px 0
-    +media($md)
-        position: absolute
-        bottom: -385px
-        margin: 0
         background-color: #F5F0E8
     +media($sm)
-        bottom: -300px
-        padding: 10px
-    +media($xs)
-        bottom: -420px
+        margin: 40px 20px 40px 20px
+        padding: 15px
     &__text
         font-size: 24px
         padding-bottom: 42px
-        +media($md)
-            font-size: 18px
         +media($sm)
-            padding-bottom: 10px
-
+            font-size: 18px
+            padding-bottom: 20px
 
 .finances-box-second__akk
     position: relative
