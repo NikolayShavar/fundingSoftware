@@ -282,8 +282,54 @@
 			<div class="pricing-text">Only pay for what you need with scaling plans you can grow with.</div>
 			<div class="pricing-num">Save 20% by paying annually</div>
 			<div class="pricing-btns">           
-				<button class="pricing-btn1">Annual       </button>
-				<button class="pricing-btn2">Monthly      </button>
+				<button class="pricing-btn1 pricing-btn" id="annual">Annual       </button>
+				<button class="pricing-btn2 pricing-btn" id="monthly">Monthly      </button>
+			</div>
+			<div class="pricing-slider"> 
+				<div class="pricing-slider__item">
+					<div class="pricing-slider__item__name">Starter</div>
+					<div class="pricing-slider__item__price"><span>$79</span> /month</div>
+					<div class="pricing-slider__item__percent">5.95% per funding advance</div>
+					<ul class="pricing-slider__item__bonus">
+						<li>Up to 10 claims</li>
+						<li>5GB of photo storage</li>
+						<li>Includes 3 users</li>
+					</ul>
+					<button class="pricing-slider__item__btn">Get Started</button>
+				</div>
+				<div class="pricing-slider__item">
+					<div class="pricing-slider__item__name">Growth</div>
+					<div class="pricing-slider__item__price"><span>$159</span> /month</div>
+					<div class="pricing-slider__item__percent">5.50% per funding advance</div>
+					<ul class="pricing-slider__item__bonus">
+						<li>Up to 50 claims</li>
+						<li>25GB of photo storage</li>
+						<li>Includes 10 users</li>
+					</ul>
+					<button class="pricing-slider__item__btn">Get Started</button>
+				</div>
+				<div class="pricing-slider__item">
+					<div class="pricing-slider__item__name">Professional</div>
+					<div class="pricing-slider__item__price"><span>$239</span> /month</div>
+					<div class="pricing-slider__item__percent">4.95% per funding advance</div>
+					<ul class="pricing-slider__item__bonus">
+						<li>Unlimited Claims</li>
+						<li>Unlimited storage</li>
+						<li>Unlimited Users</li>
+					</ul>
+					<button class="pricing-slider__item__btn">Get Started</button>
+				</div>
+				<div class="pricing-slider__item">
+					<div class="pricing-slider__item__name">Enterprise</div>
+					<div class="pricing-slider__item__price"><span>Custom</span></div>
+					<div class="pricing-slider__item__percent">Call for volume discounts</div>
+					<ul class="pricing-slider__item__bonus">
+						<li>Unlimited Claims</li>
+						<li>Cloud Hosting</li>
+						<li>Dedicated Support</li>
+					</ul>
+					<button class="pricing-slider__item__btn">Get Started</button>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -301,4 +347,7 @@
 	</section>
 </body>
 <footer> </footer>
-<script src="js/main.min.js"></script></html>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/libs/slick.min.js"></script>
+<script src="js/main.min.js"></script>

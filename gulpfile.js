@@ -82,7 +82,7 @@ function watching() {            //СЛЕДИЛКА и Живой сервер
   watch(['src/sass/*.sass','src/blocks/**/*.sass'], styles)
   watch(['src/images'], images)
   watch(['src/js/main.js', 'src/blocks/**/*.js'], scripts)
-  // watch(['src/components/*','app/pages/*' ], pages)
+  watch(['src/js/libs/*.js'], jscopy)
   watch(['src/**/*.html']).on('change', browserSync.reload);
 }
 
@@ -92,6 +92,11 @@ function scripts() {            //обработчик js
     .pipe(uglify())
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
+}
+
+function jscopy() {
+  return src('src/js/libs/*.js')
+  .pipe(dest('app/js/libs'))
 }
 
 
@@ -127,9 +132,8 @@ exports.watching = watching;
 exports.images = images;
 exports.sprite = sprite;
 exports.fonts = fonts;
-// exports.pages = pages;
 exports.pughtml = pughtml;
 
 
 exports.clean = series(cleanapp, html, styles, scripts)
-exports.default = parallel(pughtml, html ,styles, scripts, images, watching);
+exports.default = parallel(pughtml, html ,styles, scripts, jscopy, images, watching);

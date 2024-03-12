@@ -2,14 +2,23 @@
     font-size: 18px
     text-align: center
     background-color: #F5F0E8
+    .container
+        +media($sm)
+            padding: 0 10px
     &-title
         font-size: 45px
         padding-top: 51px
+        +media($lg)
+            padding-top: 25px
     &-text
         padding-top: 25px
+        +media($lg)
+            padding-top: 15px
     &-num
         padding-top: 25px
-        color: #303F9F
+        color: $blue
+        +media($lg)
+            padding-top: 15px
         
 .pricing-btns
     display: flex
@@ -18,30 +27,108 @@
     padding-top: 10px
     font-size: 19px
     padding-bottom: 28px
+    +media($lg)
+        padding-bottom: 0
     
 
-.pricing-btn1
+
+
+.pricing-btn
+    color: $blue
+    background-color: #fff
+    border-radius: 15px
+    border: none
+    padding: 15px 24px 17px
+    cursor: pointer
+
+.pricing-btn.active
     color: #fff
-    background-color: #303F9F
-    border-radius: 15px
-    border: none
-    padding: 15px 24px 17px
-    cursor: pointer
+    background-color: $blue
+    transition:.3s
 
-.pricing-btn1:hover
-    color: #303F9F
+
+//slider
+
+.pricing-slider
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 12px
+    padding-top: 28px
+    padding-bottom: 80px
+    +media($lg)
+        grid-template-columns: repeat(2, 2fr)
+        justify-items: center
+        padding-top: 10px
+        padding-bottom: 40px
+    +media($md)
+        grid-template-columns: repeat(1, 4fr)
+    
+    &__item
+        padding: 33px 24px
+        background-color: #fff
+        color: #333
+        border-radius: 15px
+        text-align: left
+        max-width: 276px
+        +media ($sm)
+            padding: 15px 24px
+        &__name
+            font-size: 37px
+        &__price
+            font-size: 21px
+            padding-top: 21px
+            +media ($sm)
+                padding-top: 10px
+            span 
+                font-size: 45px
+                color: $blue
+        &__percent
+            font-size: 18px
+            padding-top: 40px
+            padding-bottom: 31px
+            +media ($sm)
+                padding-top: 15px
+                padding-bottom: 20px
+
+.pricing-slider__item__bonus
+    display: flex
+    flex-direction: column
+    gap: 15px
+    li
+        font-size: 17px
+        color: $blue
+    li::before
+        content: ''
+        display: inline-block
+        width: 25px
+        height: 15px
+        background-image: url('../images/sprite.svg#bird')
+        background-size: contain
+        background-repeat: no-repeat
+
+.pricing-slider__item__btn
+    width: 228px
     background-color: #fff
-    transition: 0.3s ease
-
-.pricing-btn2
-    color: #303F9F
-    background-color: #fff
+    color: $blue
     border-radius: 15px
-    border: none
-    padding: 15px 24px 17px
+    border: $blue 2px solid
+    margin-top: 80px
+    padding-top: 16px
+    padding-bottom: 18px
+    font-size: 18px
     cursor: pointer
+    +media ($sm)
+        margin-top: 20px
 
-.pricing-btn2:hover
-    color: #FFF
-    background-color: #303F9F
-    transition: 0.3s ease
+.pricing-slider__item:hover
+    background-color: $blue
+    color: #fff
+    transition:.3s
+    .pricing-slider__item__price
+        span
+            color: #fff
+    ul
+        li
+            color: #fff
+        li::before
+            background-image: url('../images/sprite.svg#bird-white')
