@@ -20,7 +20,6 @@ function pughtml() {
   
   return src('src/pages/*.pug')
   .pipe(pug({pretty: '\t',}))
-  .pipe(dest('src/'))
   .pipe(dest('app/'))
   .pipe(browserSync.stream())
 }
