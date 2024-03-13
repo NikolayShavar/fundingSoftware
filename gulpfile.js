@@ -135,4 +135,4 @@ exports.pughtml = pughtml;
 
 
 exports.clean = series(cleanapp, html, styles, scripts)
-exports.default = parallel(pughtml, html ,styles, scripts, jscopy, images, watching);
+exports.default = parallel(pughtml, sprite, fonts, html ,styles, scripts, jscopy, images, watching);
